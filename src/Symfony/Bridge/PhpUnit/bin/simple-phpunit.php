@@ -261,6 +261,9 @@ require PHPUNIT_COMPOSER_INSTALL;
 if (!class_exists('SymfonyExcludeListPhpunit', false)) {
     class SymfonyExcludeListPhpunit {}
 }
+if (!class_exists('SymfonyExcludeListSimplePhpunit', false)) {
+    class SymfonyExcludeListSimplePhpunit {}
+}
 if (method_exists('PHPUnit\Util\ExcludeList', 'addDirectory')) {
     (new PHPUnit\Util\Excludelist())->getExcludedDirectories();
     PHPUnit\Util\ExcludeList::addDirectory(\dirname((new \ReflectionClass('SymfonyExcludeListPhpunit'))->getFileName()));
